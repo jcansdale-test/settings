@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      packages: write
+      # packages: write
       contents: read
 
     steps:
@@ -34,7 +34,7 @@ jobs:
       - name: Publish the package
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: "${{ secrets.GITHUB_TOKEN }}x"
+          NODE_AUTH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Trigger npm-install workflow
         if: ${{ env.GITHUB_TOKEN != null }}
