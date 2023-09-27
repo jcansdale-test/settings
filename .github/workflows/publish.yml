@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      # packages: write
+      packages: write
       contents: read
 
     steps:
